@@ -3,7 +3,6 @@ import React from 'react'
 export default function Header() {
   return (
       <header>
-            <h2>Header</h2>
           <nav>
               <a href='#'>Home</a>
               <a href='#'>Characters</a>
