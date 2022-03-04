@@ -12,15 +12,15 @@ export default function Header() {
                     className='navContainer__link'>
                     Home
                 </Link>
-
+                
                 <Link to='Characters' className='navContainer__link'>
                 Characters
                 </Link>
-
+                
                 <Link to='Films' className='navContainer__link'>
                 Films
                 </Link>
-
+                
                 <Link to='Contact' className='navContainer__link'>
                 Contact
                 </Link>
