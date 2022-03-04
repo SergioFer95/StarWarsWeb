@@ -1,15 +1,19 @@
 import React from 'react'
+import logo from './assets/logo/starWarsLogo.png';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
-  return (
-      <header>
-          {/* <nav>
-              <a href='#'>Home</a>
-              <a href='#'>Characters</a>
-              <a href='#'>Films</a>
-              <a href='#'>Contact</a>
-          </nav> */}
-          <img src='https://www.pngkit.com/png/full/432-4327979_disfruta-de-los-20-renders-de-la-pelicula.png' alt='logo'/>
-      </header>
-  )
+    return (
+        <header>
+
+            <nav>
+                <Link to='/'>Home</Link>
+                <Link to='Characters'>Characters</Link>
+                <Link to='Films'>Films</Link>
+                <Link to='Contact'>Contact</Link>
+            </nav>
+            
+            <img src={logo} alt='logo' />
+        </header>
+    )
 }

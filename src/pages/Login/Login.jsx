@@ -1,46 +1,69 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useFormik } from 'formik';
 import Button from '../../components/Button/Button';
 import anakin from './assets/images/anakinLightSaber.png';
 import obiWan from './assets/images/obiWanLightSaber.png';
-import anonimus from './assets/images/anonimusLightSaber.png';
 
 export default function Login() {
-    const [userName, setUserName] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+  const formik = useFormik({
+    initialValues: {
+      userName: "",
+      email: "",
+      password: ""
+    },
+    onSubmit: values => {
+      alert(JSON.stringify(values));
+    }
+
+  })
 
 
 
   return (
-    <div>
-        <h1>Welcome, young padawan. 
+    <div className="loginBody">
+      <h1>Welcome, young padawan.
         It is time to identify yourself:</h1>
 
-        <img src={anakin} alt='imageLightSaberOff'/>
+      <img src={anakin} alt='imageLightSaberOff' />
 
-        <form>
-            <label for="userName">User Name</label>
-            <input type="text" id="userName" 
-            name="userName" value={userName} 
-            onChange={e => setUserName(e.target.value)}/>
+      <form>
+        <label htmlFor="userName">User Name</label>
+        <input
+          type="text"
+          id="userName"
+          name="userName"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.userName}
+        />
 
-            <label for="email">Email</label>
-            <input type="email" id="email" 
-            name="email" value={email} 
-            onChange={e => setEmail(e.target.value)}/>
+        <label htmlFor="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value={formik.values.email}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+        />
 
-            <label for="password">Password</label>
-            <input type="password" id="password" 
-            name="password" value={password} 
-            onChange={e => setPassword(e.target.value)}/>
+        <label htmlFor="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          value={formik.values.password}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+        />
 
-            <Button btnContain='Login'/>
-        </form>
+        <Button btnContain='Log In' />
+      </form>
 
-        <img src={obiWan} alt='imageLightSaberOff'/>
-
-        <img src={anonimus} alt='imageLightSaberOff'/>
+      <img src={obiWan} alt='imageLightSaberOff' />
 
     </div>
   )
 }
+
+
