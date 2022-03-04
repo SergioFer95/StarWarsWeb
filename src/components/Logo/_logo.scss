@@ -1,0 +1,17 @@
+.logoContainer{
+    width: 500px;
+    height:300px;
+
+    border: 2px solid red;
+    margin: 0 auto;
+
+    display: flex;
+
+    &__img{
+        width: 37.5rem;
+        height: 18.75rem;
+
+        margin: 0 auto;
+        border: 1px solid blue;
+    }
+}

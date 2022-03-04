@@ -1,19 +1,31 @@
 import React from 'react'
-import logo from './assets/logo/starWarsLogo.png';
 import { Link } from 'react-router-dom';
+import Logo from '../Logo/Logo';
 
 export default function Header() {
     return (
-        <header>
+        <>
+            <Logo />
 
-            <nav>
-                <Link to='/'>Home</Link>
-                <Link to='Characters'>Characters</Link>
-                <Link to='Films'>Films</Link>
-                <Link to='Contact'>Contact</Link>
+            <nav className='navContainer'>
+                <Link to='/'
+                    className='navContainer__link'>
+                    Home
+                </Link>
+
+                <Link to='Characters' className='navContainer__link'>
+                Characters
+                </Link>
+
+                <Link to='Films' className='navContainer__link'>
+                Films
+                </Link>
+
+                <Link to='Contact' className='navContainer__link'>
+                Contact
+                </Link>
             </nav>
-            
-            <img src={logo} alt='logo' />
-        </header>
+
+        </>
     )
 }
