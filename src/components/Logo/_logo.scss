@@ -2,16 +2,21 @@
     width: 31.25rem;
     height:18.75rem;
 
-    border: 2px solid red;
+    // border: 2px solid red;
     margin: 0 auto;
 
     display: flex;
+    justify-content: center;
+    align-items: center;
 
     &__img{
         width: 37.5rem;
         height: 18.75rem;
+        flex-grow: 1;
+        flex-shrink: 1;
+
+       
 
         margin: 0 auto;
-        border: 1px solid blue;
     }
 }
