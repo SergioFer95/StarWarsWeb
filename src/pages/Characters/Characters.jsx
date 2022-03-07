@@ -12,16 +12,23 @@ export default function Characters() {
   })
 
   return (
-    <div className='charactersContainer'>
-      {characters.map((character) => {
-        return (
-          <section key={character.id} className='charactersContainer__infoContainer'>
-            <img src={character.image} alt='characterImage' className='infoContainer__pic'/>
-            <h2 className='infoContainer__name'>{character.name}</h2>
-          </section>
-        )
-      })}
+    <>
+      <h2 className='titlePage'>- CHARACTERS -</h2>
+      <div className='charactersContainer'>
+        {characters.map((character) => {
+          if (!character.image) {
+            return character.style.display = 'none';
+          }
 
-    </div>
+          return (
+            <section key={character.id} className='charactersContainer__infoContainer'>
+              <img src={character.image} alt='characterImage' className='infoContainer__pic' />
+              <h2 className='infoContainer__name'>{character.name}</h2>
+            </section>
+          )
+        })}
+
+      </div>
+    </>
   )
 }
