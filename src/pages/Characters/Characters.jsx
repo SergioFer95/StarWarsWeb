@@ -1,9 +1,27 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 export default function Characters() {
+  const [characters, setCharacters] = useState([]);
+
+  const baseUrl = 'https://akabab.github.io/starwars-api/api';
+
+  useEffect(() => {
+    fetch(`${baseUrl}/all.json`)
+      .then(data => data.json())
+      .then(data => setCharacters(data))
+  })
+
   return (
-    <section>
-        <h2>Characters</h2>
-    </section>
+    <div className='charactersContainer'>
+      {characters.map((character) => {
+        return (
+          <section key={character.id} className='charactersContainer__infoContainer'>
+            <img src={character.image} alt='characterImage' className='infoContainer__pic'/>
+            <h2 className='infoContainer__name'>{character.name}</h2>
+          </section>
+        )
+      })}
+
+    </div>
   )
 }

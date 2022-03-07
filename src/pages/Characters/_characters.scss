@@ -1,0 +1,20 @@
+.charactersContainer{
+    border: 5px solid green;
+
+    &__infoContainer{
+        border: 2px solid pink;
+
+        .infoContainer__pic{
+            width: 400px;
+            height: 518px;
+        
+            border: 3px solid red;
+        }
+
+        .infoContainer__name{
+            color: white;
+            text-transform: uppercase;
+        }
+        
+    }
+}
