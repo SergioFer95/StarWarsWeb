@@ -49,6 +49,18 @@
 
             font-family: Russo One;
             letter-spacing: 2px;
+
+            padding: 8px;
+
+            &:hover{
+                color: black;
+            }
+        }
+
+        .infoContainer__link{
+            text-decoration: none;
+
+            
         }
         
     }

@@ -1,24 +1,22 @@
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom';
 
 export default function SingleCharacterInfo() {
     const [singleCharacter, setSingleCharacter] = useState([]);
+
     const baseUrlSingleInfo = 'https://akabab.github.io/starwars-api/api';
 
-    const {characterId} = useParams
-
     useEffect(() => {
-        fetch(`${baseUrlSingleInfo}/id/${characterId}.json`)
+        fetch(`${baseUrlSingleInfo}/id/....json`)
             .then(data => data.json())
             .then(data => setSingleCharacter(data))
     })
 
     return (
         <div className='singleCharacterContainer'>
+            <h2>Character Information</h2>
             {singleCharacter.map((singleInfo) => {
                 return (
-                    <section className='singleCharacterInfo' key={singleInfo.id}>
-                        <h2>Character Information</h2>
+                    <section className='singleCharacterInfo' key={singleInfo.name}>
                         <h3>{singleInfo.name}</h3>
                         <p>Gender: {singleInfo.gender}</p>
                         <p>Homeworld: {singleInfo.homeworld}</p>

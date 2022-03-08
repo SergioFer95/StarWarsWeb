@@ -16,6 +16,7 @@ export default function Characters() {
       <h2 className='titlePage'>- CHARACTERS -</h2>
       <div className='charactersContainer'>
         {characters.map((character) => {
+
           if (!character.image) {
             return character.style.display = 'none';
           }

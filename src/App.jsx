@@ -9,9 +9,9 @@ import Header from './components/Header/Header';
 import Characters from './pages/Characters/Characters';
 import Home from './pages/Home/Home';
 import Films from './pages/Films/Films';
-import Contact from './pages/Contact/Contact';
+// import Contact from './pages/Contact/Contact';
 import SingleCharacterInfo from './pages/SingleCharacterInfo/SingleCharacterInfo';
-// import Login from './pages/Login/Login';
+import Login from './pages/Login/Login';
 
 
 function App() {
@@ -25,13 +25,11 @@ function App() {
 
           <Route path='/' element={<Home />}/>
           <Route path='Characters' element={<Characters />}/>
+          <Route path='Characters/:characterName' element={<SingleCharacterInfo />}/>
           <Route path='Films' element={<Films />}/>
-          <Route path='LogIn' element={<Contact />}/>
-          {/* <Login /> */}
+          <Route path='LogIn' element={<Login />}/>
 
         </Routes>
-
-        <SingleCharacterInfo />
 
       </Router>
     </div>
