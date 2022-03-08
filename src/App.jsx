@@ -10,6 +10,7 @@ import Characters from './pages/Characters/Characters';
 import Home from './pages/Home/Home';
 import Films from './pages/Films/Films';
 import Contact from './pages/Contact/Contact';
+import SingleCharacterInfo from './pages/SingleCharacterInfo/SingleCharacterInfo';
 // import Login from './pages/Login/Login';
 
 
@@ -25,10 +26,12 @@ function App() {
           <Route path='/' element={<Home />}/>
           <Route path='Characters' element={<Characters />}/>
           <Route path='Films' element={<Films />}/>
-          <Route path='Contact' element={<Contact />}/>
+          <Route path='LogIn' element={<Contact />}/>
           {/* <Login /> */}
 
         </Routes>
+
+        <SingleCharacterInfo />
 
       </Router>
     </div>

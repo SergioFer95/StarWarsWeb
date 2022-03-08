@@ -21,8 +21,8 @@ export default function Header() {
                 Films
                 </Link>
                 
-                <Link to='Contact' className='navContainer__link'>
-                Contact
+                <Link to='LogIn' className='navContainer__link'>
+                Log In
                 </Link>
             </nav>
 
