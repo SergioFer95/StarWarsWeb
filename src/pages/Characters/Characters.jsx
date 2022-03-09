@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Characters() {
   const [characters, setCharacters] = useState([]);
@@ -24,7 +25,9 @@ export default function Characters() {
           return (
             <section key={character.id} className='charactersContainer__infoContainer'>
               <img src={character.image} alt='characterImage' className='infoContainer__pic' />
-              <h2 className='infoContainer__name'>{character.name}</h2>
+              <Link to={`SingleCharacter/${character.id}`}>
+                <h2 className='infoContainer__name'>{character.name}</h2>
+              </Link>
             </section>
           )
         })}

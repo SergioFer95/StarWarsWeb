@@ -12,6 +12,7 @@ import Films from './pages/Films/Films';
 // import Contact from './pages/Contact/Contact';
 import SingleCharacterInfo from './pages/SingleCharacterInfo/SingleCharacterInfo';
 import Login from './pages/Login/Login';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -25,11 +26,13 @@ function App() {
 
           <Route path='/' element={<Home />}/>
           <Route path='Characters' element={<Characters />}/>
-          <Route path='Characters/:characterName' element={<SingleCharacterInfo />}/>
+          <Route path='SingleCharacter/:id' element={<SingleCharacterInfo />}/>
           <Route path='Films' element={<Films />}/>
           <Route path='LogIn' element={<Login />}/>
 
         </Routes>
+
+        <Footer />
 
       </Router>
     </div>
