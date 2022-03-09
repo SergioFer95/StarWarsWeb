@@ -5,6 +5,9 @@ import FrontBattle from './assets/images/FrontBattle.jpg';
 import Battle from './assets/images/Batlle.webp';
 import Grievous from './assets/images/Grievous.webp';
 import CloneFace from './assets/images/CloneFace.jpg';
+import Grievous2 from './assets/images/Grievous2.jpg';
+import Kylo from './assets/images/Kylo.jpg';
+import Rey from './assets/images/Rey.jpg';
 
 export default function Home() {
   return (
@@ -42,23 +45,46 @@ export default function Home() {
 
         <section className='cardContent'>
           <div>
-            <img src={FrontBattle} alt='battle' />
+            <img src={FrontBattle} alt='battle' className='cardContent__img' />
           </div>
 
-          <div>
+          <div className='cardContent__text'>
             <h3>Welcome to STAR WARS universe.</h3>
             <p>Discover all you need to become a famous jedy or maybe you preffer to become a famous sith, next to the dark side.</p>
           </div>
         </section>
 
         <section className='cardContent'>
-          <div>
-            <p>Meet the heroes. He partakes in the universe's struggle for separatist liberation.</p>
+          <div className='cardContent__text'>
+            <p>Meet the heroes. Take part in the universe's struggle for separatist liberation.</p>
           </div>
 
           <div>
-            <img src={CloneFace} alt='battle' />
+            <img src={CloneFace} alt='battle' className='cardContent__img' />
           </div>
+        </section>
+
+        <section className='cardContent'>
+          <div>
+            <img src={Grievous2} alt='battle' className='cardContent__img' />
+          </div>
+
+          <div className='cardContent__text'>
+            <p>Or meet the villains and fight Republic oppression alongside the driods.</p>
+          </div>
+        </section>
+
+        <section className='chooseTeam'>
+          <div>
+            <img src={Kylo} alt='kyloImg' className='kylo'/>
+          </div>
+
+          <p>It is time to choose your force´s side</p>
+
+          <div>
+            <img src={Rey} alt='reyImg' className='rey'/>
+          </div>
+
         </section>
 
       </div>

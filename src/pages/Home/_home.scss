@@ -20,4 +20,27 @@
         width: 100%;
         height: 100%;
     }
+
+    .homeContent{
+
+        .cardContent{
+            width: 80%;
+            height: auto;
+            margin: 0 auto;
+
+
+            border: 1px solid red;
+
+            &__text{
+                width: 50%;
+                height: auto;
+
+            }
+
+            &__img{
+                width: 50%;
+                height: auto;
+            }
+        }
+    }
 }
