@@ -1,12 +1,11 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 
-// IMAGES IMPORTED:
+// CAROUSEL IMAGES:
 import ChangeSaber from './assets/images/changeSaber.jpeg'
 import BattleShip from './assets/images/BattleShips.jpg';
-
-import Battle from './assets/images/Batlle.webp';
-import Grievous from './assets/images/Grievous.webp';
+import Grievous from './assets/images/Grievous.jpg';
+import Yoda from './assets/images/YodaBattle.jpg';
 
 export default function HomeCarousel() {
     return (
@@ -35,7 +34,7 @@ export default function HomeCarousel() {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src={Battle}
+                    src={Yoda}
                     alt="Fourth slide"
                 />
             </Carousel.Item>
