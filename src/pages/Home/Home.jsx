@@ -2,10 +2,10 @@ import React from 'react'
 import HomeCarousel from '../../components/Carousel/HomeCarousel';
 
 import FrontBattle from './assets/images/FrontBattle.jpg';
-import CloneFace from './assets/images/CloneFace.jpg';
-import Grievous2 from './assets/images/Grievous2.jpg';
-import Kylo from './assets/images/Kylo.jpg';
-import Rey from './assets/images/Rey.jpg';
+import CloneFace from './assets/images/CloneFace1.jpg';
+import Grievous2 from './assets/images/Grievous21.jpg';
+// import Kylo from './assets/images/Kylo.jpg';
+// import Rey from './assets/images/Rey.jpg';
 
 export default function Home() {
   return (
@@ -16,8 +16,8 @@ export default function Home() {
       <div className='homeContent'>
 
         <section className='cardContent'>
-          <div>
-            <img src={FrontBattle} alt='battle' className='cardContent__img' />
+          <div className='cardContent__contentImg'>
+            <img src={FrontBattle} alt='battle' className='cardContent__contentImg__img' />
           </div>
 
           <div className='cardContent__text'>
@@ -31,14 +31,14 @@ export default function Home() {
             <p>Meet the heroes. Take part in the universe's struggle for separatist liberation.</p>
           </div>
 
-          <div>
-            <img src={CloneFace} alt='battle' className='cardContent__img' />
+          <div className='cardContent__contentImg'>
+            <img src={CloneFace} alt='battle' className='cardContent__contentImg__img' />
           </div>
         </section>
 
         <section className='cardContent'>
-          <div>
-            <img src={Grievous2} alt='battle' className='cardContent__img' />
+          <div className='cardContent__contentImg'>
+            <img src={Grievous2} alt='battle' className='cardContent__contentImg__img' />
           </div>
 
           <div className='cardContent__text'>
@@ -46,11 +46,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section>
+        {/* <section>
           USUARIOS Y SUS OPINIONES (llamada api, etc) TENEMOS QUE HACER UN COMPONENTE PROPIO DE ESTE APARTADO, NO CREARLO EN LA HOME DIRECTAMENTE!!!
-        </section>
+        </section> */}
 
-        <section className='chooseTeam'>
+        {/* <section className='chooseTeam'>
           <div>
             <img src={Kylo} alt='kyloImg' className='kylo'/>
           </div>
@@ -61,7 +61,7 @@ export default function Home() {
             <img src={Rey} alt='reyImg' className='rey'/>
           </div>
 
-        </section>
+        </section> */}
 
       </div>
 
