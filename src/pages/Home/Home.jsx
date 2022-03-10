@@ -1,9 +1,7 @@
 import React from 'react'
-import ChangeSaber from './assets/images/changeSaber.jpeg'
-import BattleShip from './assets/images/BattleShips.jpg';
+import HomeCarousel from '../../components/Carousel/HomeCarousel';
+
 import FrontBattle from './assets/images/FrontBattle.jpg';
-import Battle from './assets/images/Batlle.webp';
-import Grievous from './assets/images/Grievous.webp';
 import CloneFace from './assets/images/CloneFace.jpg';
 import Grievous2 from './assets/images/Grievous2.jpg';
 import Kylo from './assets/images/Kylo.jpg';
@@ -13,33 +11,7 @@ export default function Home() {
   return (
     <div className="homeBody">
 
-      <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img src={ChangeSaber} className="d-block w-100" alt="pictureCHaracter" />
-          </div>
-          <div className="carousel-item">
-            <img src={Battle} className="d-block w-100" alt="pictureBattle" />
-          </div>
-          <div className="carousel-item">
-            <img src={Grievous} className="d-block w-100" alt="pictureShips" />
-          </div>
-          <div className="carousel-item">
-            <img src={BattleShip} className="d-block w-100" alt="clone" />
-          </div>
-        </div>
-
-        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-
-        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
-        </button>
-
-      </div>
+      <HomeCarousel />
 
       <div className='homeContent'>
 
@@ -74,12 +46,16 @@ export default function Home() {
           </div>
         </section>
 
+        <section>
+          USUARIOS Y SUS OPINIONES (llamada api, etc) TENEMOS QUE HACER UN COMPONENTE PROPIO DE ESTE APARTADO, NO CREARLO EN LA HOME DIRECTAMENTE!!!
+        </section>
+
         <section className='chooseTeam'>
           <div>
             <img src={Kylo} alt='kyloImg' className='kylo'/>
           </div>
 
-          <p>It is time to choose your force´s side</p>
+          <p>Now it is time to choose your force´s side</p>
 
           <div>
             <img src={Rey} alt='reyImg' className='rey'/>
