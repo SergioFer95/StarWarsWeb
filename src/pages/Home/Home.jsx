@@ -46,19 +46,12 @@ export default function Home() {
             <p>Or meet the villains and fight Republic oppression alongside the driods.</p>
           </div>
         </section>
+        
+      </div>
 
-        <UserOpinions />
+      <UserOpinions />
 
-        {/* <section>
-          USUARIOS Y SUS OPINIONES (llamada api, etc) TENEMOS QUE HACER UN COMPONENTE PROPIO DE ESTE APARTADO, NO CREARLO EN LA HOME DIRECTAMENTE!!!
-        </section> */}
-
-
-
-
-
-
-        {/* <section className='chooseTeam'>
+      {/* <section className='chooseTeam'>
           <div>
             <img src={Kylo} alt='kyloImg' className='kylo'/>
           </div>
@@ -70,8 +63,6 @@ export default function Home() {
           </div>
 
         </section> */}
-
-      </div>
 
     </div>
   )
