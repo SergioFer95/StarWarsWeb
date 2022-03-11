@@ -4,6 +4,7 @@ import HomeCarousel from '../../components/Carousel/HomeCarousel';
 import FrontBattle from './assets/images/FrontBattle.jpg';
 import CloneFace from './assets/images/CloneFace1.jpg';
 import Grievous2 from './assets/images/Grievous21.jpg';
+import UserOpinions from '../../components/UserOpinions/UserOpinions';
 // import Kylo from './assets/images/Kylo.jpg';
 // import Rey from './assets/images/Rey.jpg';
 
@@ -46,9 +47,16 @@ export default function Home() {
           </div>
         </section>
 
+        <UserOpinions />
+
         {/* <section>
           USUARIOS Y SUS OPINIONES (llamada api, etc) TENEMOS QUE HACER UN COMPONENTE PROPIO DE ESTE APARTADO, NO CREARLO EN LA HOME DIRECTAMENTE!!!
         </section> */}
+
+
+
+
+
 
         {/* <section className='chooseTeam'>
           <div>
