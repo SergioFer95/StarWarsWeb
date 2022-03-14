@@ -25,9 +25,11 @@ export default function Characters() {
           return (
             <section key={character.id} className='charactersContainer__infoContainer'>
               <img src={character.image} alt='characterImage' className='infoContainer__pic' />
-              <Link to={`SingleCharacter/${character.id}`}>
+
+              <Link to={`SingleCharacter/${character.id}`} className='infoContainer__link'>
                 <h2 className='infoContainer__name'>{character.name}</h2>
               </Link>
+
             </section>
           )
         })}
