@@ -11,12 +11,11 @@ import EpisodeVI from './assets/FilmsCover/Episode-VI.jpg';
 
 export default function Films() {
   return (
-    <div>
+    <div className='fatherFilmsContainer'>
       <h2 className='titlePage'>- FILMS -</h2>
 
       <section className='filmsContainer'>
-
-        <Link to='EpisodeI'>
+        <Link to='/:EpisodeI'>
           <div className='cardFilm'>
             <div className='cardFilm__img'>
               <img src={EpisodeI} alt='CoverFilm' className='cardFilm__img__image' />
@@ -26,6 +25,8 @@ export default function Films() {
             <h3>The Phantom Menace</h3>
           </div>
         </Link>
+
+
 
         <div className='cardFilm'>
           <div className='cardFilm__img'>
@@ -80,6 +81,7 @@ export default function Films() {
       </section>
 
       
+
     </div>
   )
 }

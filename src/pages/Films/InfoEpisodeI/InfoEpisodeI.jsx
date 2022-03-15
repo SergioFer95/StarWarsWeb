@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
 import CoverEpisodeI from '../assets/FilmsCover/Episode-I.jpg';
 
 export default function InfoEpisodeI() {
@@ -7,9 +6,9 @@ export default function InfoEpisodeI() {
 
     useEffect(() => {
         fetch('https://swapi.dev/api/films/4/')
-            .then(data => data.json())
-            .then(data => setEpisode1(data))
-        });
+        .then(data => data.json())
+        .then(data => {console.log(data); setEpisode1(data)})
+    },[]);
    
 
     return (
@@ -18,14 +17,14 @@ export default function InfoEpisodeI() {
                 <img src={CoverEpisodeI} alt='EpisodeICover'/>
             </section>
 
-            {episode1.map((episode) => {
+            {episode1.map((epi, index) => {
                 return (
-                    <section key={episode.episode_id}>
-                        <h3>{episode.title}</h3>
-                        <p>OPENING: {episode.opening_crawl}</p>
-                        <h4>Director: {episode.director}</h4>
-                        <h4>Producer: {episode.producer}</h4>
-                        <p>Release Date: {episode.release_date}</p>
+                    <section key={index}>
+                        <h3>{epi.title}</h3>
+                        <p>OPENING: {epi.opening_crawl}</p>
+                        <h4>Director: {epi.director}</h4>
+                        <h4>Producer: {epi.producer}</h4>
+                        <p>Release Date: {epi.release_date}</p>
                     </section>
                 )
             })}

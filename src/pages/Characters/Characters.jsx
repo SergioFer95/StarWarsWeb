@@ -10,27 +10,27 @@ export default function Characters() {
     let mounted = true;
     fetch(`${baseUrl}/all.json`)
       .then(data => data.json())
-      .then(data => {console.log(data); setCharacters(data)})
-      return function cleanUp(){
-        mounted = false;
-      }
-  },[])
+      .then(data => setCharacters(data))
+    return function cleanUp() {
+      mounted = false;
+    }
+  }, [])
+
+
 
   return (
     <>
       <h2 className='titlePage'>- CHARACTERS -</h2>
       <div className='charactersContainer'>
 
-        {characters.filter((character) =>
-          character.name !== 'Lobot' 
-          || 'Mon Mothama' || 'Roos Tarpals' 
-          || 'Shmi Skywalker' || 'Ratts Tyerell' 
-          || 'Gasgano' || 'Saesee Tiin' 
-          || 'Yarael Poof' || 'Cordé' || 'Luminara Unduli'
-          || 'San Hill' || 'Sly Moore'
-
-        ).map((character) => {
-
+        {characters.filter((clear) => {
+          return clear.name !== 'Lobot'
+            || 'Mon Mothama' || 'Roos Tarpals'
+            || 'Shmi Skywalker' || 'Ratts Tyerell'
+            || 'Gasgano' || 'Saesee Tiin'
+            || 'Yarael Poof' || 'Cordé' || 'Luminara Unduli'
+            || 'San Hill' || 'Sly Moore'
+        }).map((character) => {
           return (
             <section key={character.id} className='charactersContainer__infoContainer'>
               <img src={character.image} alt='characterImage' className='infoContainer__pic' />

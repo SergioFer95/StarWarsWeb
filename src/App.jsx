@@ -31,7 +31,7 @@ function App() {
           <Route path='Films' element={<Films />}/>
           <Route path='LogIn' element={<Login />}/>
 
-          <Route path='Filsm/:EpisodeI' element={<InfoEpisodeI />}/>
+          <Route path='Films/:EpisodeI' element={<InfoEpisodeI />}/>
           {/* <Route path='Episode-II' element={<InfoEpisodeII />}/>
           <Route path='Episode-III' element={<InfoEpisodeIII />}/>
           <Route path='Episode-VI' element={<InfoEpisodeIV />}/>
