@@ -18,8 +18,9 @@ export default function Characters() {
       <div className='charactersContainer'>
         {characters.map((character) => {
 
-          if (!character.image) {
-            return character.style.display = 'none';
+
+          if (character.image === undefined) {
+            return (character.style.display = 'none');
           }
 
           return (

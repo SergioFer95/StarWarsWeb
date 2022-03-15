@@ -4,7 +4,7 @@
 
     border-top: 5px solid #817777;
     border-bottom: 5px solid #817777;
-    background-color: antiquewhite;
+    background-color: rgb(243, 190, 120);
 
     margin: 0 auto;
 
@@ -14,6 +14,11 @@
         text-align: center;
         margin-top: 30px;
         margin-bottom: -5px;
+
+        font-family: 'Exo 2';
+        font-size: 35px;
+        color: rgb(146, 13, 13);
+        text-shadow: 2px 2px 2px black;
     }
 
     .carouselContainer{
@@ -32,11 +37,24 @@
             margin-bottom: 20px;
             text-align: center;
 
+            .userName{
+                text-transform: uppercase;
+                font-family: 'Russo One';
+            }
+
+            .userEmail{
+                font-family: 'Syne Mono';
+                text-transform: lowercase;
+            }
+
             &__body{
                 width: 60%;
                 height: auto;
                 margin: 0 auto;
                 margin-bottom: 20px;
+
+                font-family: 'Syne Mono';
+
             }
         }
 

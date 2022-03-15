@@ -15,7 +15,7 @@ export default function UserOpinions() {
     return (
         <div className='usersOpinionsContent'>
 
-            <h3 className='comentsTitle'>COMENTS OF OUR FAVOURITES JEDIS</h3>
+            <h3 className='comentsTitle'>COMENTS FROM OUR FAVOURITES JEDIS & SITHS</h3>
 
             <Carousel variant="dark">
             
@@ -24,8 +24,8 @@ export default function UserOpinions() {
                         <Carousel.Item className='carouselContainer' key={index}>
 
                             <section className='cardUser'>
-                                <h4>{user.name}</h4>
-                                <p>{user.email}</p>
+                                <h4 className='userName'>{user.name}</h4>
+                                <p className='userEmail'>{user.email}</p>
                                 <p className='cardUser__body'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam volutpat sapien non nisl placerat, eu vulputate purus tempus. Mauris ac condimentum arcu. Etiam volutpat sapien non nisl placerat, eu vulputate purus tempus.</p>
                             </section>
                         </Carousel.Item>
