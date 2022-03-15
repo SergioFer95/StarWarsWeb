@@ -5,6 +5,7 @@ import FrontBattle from './assets/images/FrontBattle.jpg';
 import CloneFace from './assets/images/CloneFace1.jpg';
 import Grievous2 from './assets/images/Grievous21.jpg';
 import UserOpinions from '../../components/UserOpinions/UserOpinions';
+import UserChoice from '../../components/UserChoice/UserChoice';
 // import Kylo from './assets/images/Kylo.jpg';
 // import Rey from './assets/images/Rey.jpg';
 
@@ -51,18 +52,7 @@ export default function Home() {
 
       <UserOpinions />
 
-      {/* <section className='chooseTeam'>
-          <div>
-            <img src={Kylo} alt='kyloImg' className='kylo'/>
-          </div>
-
-          <p>Now it is time to choose your force´s side</p>
-
-          <div>
-            <img src={Rey} alt='reyImg' className='rey'/>
-          </div>
-
-        </section> */}
+      <UserChoice />
 
     </div>
   )
