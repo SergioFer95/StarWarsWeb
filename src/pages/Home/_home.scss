@@ -38,8 +38,45 @@
             &__text{
                 width: 50%;
                 height: 43.75rem;
+                text-align: center;
+                padding: 20px;
 
-                background-color: red;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                background-color: rgb(149, 75, 75);
+                box-shadow: inset 0.5px 0.5px 0.5px 2px rgb(177, 177, 31);
+
+                &__welcome{
+                    width: 100%;
+                    height: auto;
+
+                    color: black;
+                    font-size: 5rem;
+                    font-family: 'Exo 2';
+
+                    margin-bottom: 10px;
+
+                    align-self: center;
+
+                }
+
+                &__paragraph{
+                    font-family: 'Syne Mono';
+                    font-size: 2.5rem;
+                    color: white;
+                    letter-spacing: 2px;
+
+                    align-self: baseline;
+
+                    &--one{
+                        font-size: 3.75rem;
+                        font-family: 'Syne Mono';
+                        color: white;
+                    }
+                }
 
             }
 

@@ -7,21 +7,29 @@ export default function Characters() {
   const baseUrl = 'https://akabab.github.io/starwars-api/api';
 
   useEffect(() => {
+    let mounted = true;
     fetch(`${baseUrl}/all.json`)
       .then(data => data.json())
-      .then(data => setCharacters(data))
-  })
+      .then(data => {console.log(data); setCharacters(data)})
+      return function cleanUp(){
+        mounted = false;
+      }
+  },[])
 
   return (
     <>
       <h2 className='titlePage'>- CHARACTERS -</h2>
       <div className='charactersContainer'>
-        {characters.map((character) => {
 
+        {characters.filter((character) =>
+          character.name !== 'Lobot' 
+          || 'Mon Mothama' || 'Roos Tarpals' 
+          || 'Shmi Skywalker' || 'Ratts Tyerell' 
+          || 'Gasgano' || 'Saesee Tiin' 
+          || 'Yarael Poof' || 'Cordé' || 'Luminara Unduli'
+          || 'San Hill' || 'Sly Moore'
 
-          if (character.image === undefined) {
-            return (character.style.display = 'none');
-          }
+        ).map((character) => {
 
           return (
             <section key={character.id} className='charactersContainer__infoContainer'>
