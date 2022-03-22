@@ -1,8 +1,7 @@
 import React from 'react';
 import { useFormik } from 'formik';
 import Button from '../../components/Button/Button';
-import anakin from './assets/images/anakinLightSaber.png';
-import obiWan from './assets/images/obiWanLightSaber.png';
+import { Link } from 'react-router-dom';
 
 export default function Login() {
   const formik = useFormik({
@@ -12,55 +11,57 @@ export default function Login() {
       password: ""
     },
     onSubmit: values => {
-      alert(JSON.stringify(values));
+      alert(JSON.stringify(values, null, 2));
     }
 
-  })
-
-
+  });
 
   return (
-    <div className="loginBody">
-      <h1>Welcome, young padawan.
-        It is time to identify yourself:</h1>
+    <div className='loginBody'>
 
-      <img src={anakin} alt='imageLightSaberOff' />
+      <section className='loginFormContainer'>
 
-      <form>
-        <label htmlFor="userName">User Name</label>
-        <input
-          type="text"
-          id="userName"
-          name="userName"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.userName}
-        />
+        <h3 className='loginFormContainer__welcome'>It is time to identify yourself</h3>
 
-        <label htmlFor="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formik.values.email}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-        />
+        <form onSubmit={formik.handleSubmit} className='loginForm'>
+          <label htmlFor="userName" className='loginForm__label'>User Name</label>
+          <input
+            type="text"
+            id="userName"
+            name="userName"
+            className='loginForm__input'
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.userName}
+          />
 
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          value={formik.values.password}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-        />
+          <label htmlFor="email" className='loginForm__label'>Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            className='loginForm__input'
+            value={formik.values.email}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+          />
 
-        <Button btnContain='Log In' />
-      </form>
+          <label htmlFor="password" className='loginForm__label'>Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            className='loginForm__input'
+            value={formik.values.password}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+          />
+          <Link to='Home'>
+            <Button btnContain='Login' />
+          </Link>
+        </form>
 
-      <img src={obiWan} alt='imageLightSaberOff' />
+      </section>
 
     </div>
   )

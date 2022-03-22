@@ -25,11 +25,11 @@ function App() {
 
         <Routes>
 
-          <Route path='/' element={<Home />}/>
+          <Route path='/' element={<Login />}/>
+          <Route path='Home' element={<Home />}/>
           <Route path='Characters' element={<Characters />}/>
           <Route path='SingleCharacter/:id' element={<SingleCharacterInfo />}/>
           <Route path='Films' element={<Films />}/>
-          <Route path='LogIn' element={<Login />}/>
 
           <Route path='Films/:EpisodeI' element={<InfoEpisodeI />}/>
           {/* <Route path='Episode-II' element={<InfoEpisodeII />}/>

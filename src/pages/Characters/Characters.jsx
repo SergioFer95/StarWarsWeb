@@ -16,8 +16,6 @@ export default function Characters() {
     }
   }, [])
 
-
-
   return (
     <>
       <h2 className='titlePage'>- CHARACTERS -</h2>

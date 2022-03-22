@@ -8,7 +8,7 @@ export default function Header() {
             <Logo />
 
             <nav className='navContainer'>
-                <Link to='/'
+                <Link to='Home'
                     className='navContainer__link'>
                     Home
                 </Link>
@@ -19,10 +19,6 @@ export default function Header() {
                 
                 <Link to='Films' className='navContainer__link'>
                 Films
-                </Link>
-                
-                <Link to='LogIn' className='navContainer__link'>
-                Log In
                 </Link>
             </nav>
 
